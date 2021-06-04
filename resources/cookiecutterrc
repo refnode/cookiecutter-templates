@@ -1,0 +1,16 @@
+default_context:
+  user_fullname: "Your Name"
+  user_email: "name@domain.tld"
+  user_name: "username, eg. your github username"
+  team_name: "teamname, eg. your github user/teamname"
+  team_email: "teamname@domain.tld"
+  repository_namespace: "myteam"
+#  project_name: "Does not make sense to give a default here"
+#  project_description_short: "Does not make sense to give a default here."
+#  repository_name: "Does not make sense to give a default here"
+#  container_name: "Does not make sense to give a default here"
+  container_registry_namespace: "myteam"
+abbreviations:
+  refnode: git@github.com:refnode/cookiecutter-templates.git
+# for testing purpose
+# cookiecutters_dir: "."

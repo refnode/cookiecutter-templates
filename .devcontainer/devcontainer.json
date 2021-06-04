@@ -1,0 +1,38 @@
+{
+  "name": "refnode cookiecutter-template development",
+  "context": "..",
+  "dockerFile": "../Dockerfile.dev",
+  "postCreateCommand": "tools/devcontainer-setup",
+  "containerEnv": {
+    "DEVCONTAINER": "1",
+  },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:${containerWorkspaceFolder}/tools",
+  },
+  "runArgs": [
+    "-e",
+    "GIT_EDITOR=code --wait",
+    "--env-file",
+    "${localWorkspaceFolder}/.env"
+  ],
+  "extensions": [
+    "ms-python.python",
+    "redhat.vscode-yaml",
+    "joshbolduc.commitlint"
+  ],
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.testing.pytestArgs": [
+      "--no-cov"
+    ],
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.defaultProfile.linux": "/usr/bin/zsh"
+  }
+}

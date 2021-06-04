@@ -1,0 +1,33 @@
+---
+default_stages:
+  - commit
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 0161422b4e09b47536ea13f49e786eb3616fe0d7 # v2.4.0
+    hooks:
+      - id: no-commit-to-branch
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+        args:
+          - --fix=lf
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+#      - id: check-yaml
+#        exclude: "template-python-click-app/{{cookiecutter.db_repository_name}}/.pre-commit-config.yaml"
+#      - id: check-json
+      - id: check-toml
+
+#  - repo: https://github.com/psf/black
+#    rev: 235412635e91950c8ef2d9ebe777f97fffd4f01d # 20.8b1
+#    hooks:
+#      - id: black
+#        language_version: python3
+
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: 2ba6564b82c125266091e2571563f7b957aec19c # 0.12.0
+    hooks:
+      - id: gitlint
+        stages:
+          - commit-msg

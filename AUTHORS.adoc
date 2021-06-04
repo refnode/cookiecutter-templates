@@ -1,0 +1,5 @@
+== refnode cookiecutter templates
+
+* Sven Wilhelm <refnode@gmail.com>
+
+== Special thanks for contributions

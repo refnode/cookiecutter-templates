@@ -1,0 +1,62 @@
+= Cookiecutter Templates
+
+Cookiecutter Templates to bootstrap different projects.
+
+For standards and conventions used in this repository, please refer to the section at the end of this README.
+
+== Install Cookiecutter
+
+.Installation on macOS
+On macOS with homebrew present, Cookiecutter is available as a ready to install package using the following shell command.
+
+[source,shell]
+----
+brew install cookiecutter
+----
+
+.Install on Debian / Ubuntu / Windows WSL
+On a Debian based distribution, Cookiecutter is available as a ready to install package using the following shell command.
+
+[source,shell]
+----
+sudo apt-get install cookiecutter
+----
+
+.General Installation Instructions
+If your setup differs, you can read the general installation instructions from the https://cookiecutter.readthedocs.io/en/1.7.2/[Cookiecutter documentation].
+
+== Using the Cookiecutter Template
+
+The most simple way to use the cookiecutter templates is to prepare a ~/.cookiecutterrc file.
+For this repository with the following content, replacing the placeholder values.
+
+[source,yaml]
+----
+default_context:
+  user_fullname: "Your Name"
+  user_email: "name@domain.tld"
+  user_name: "username, eg. your github username"
+  team_name: "teamname, eg. your github user/teamname"
+  team_email: "teamname@domain.tld"
+  repository_namespace: "myteam"
+#  project_name: "Does not make sense to give a default here"
+#  project_description_short: "Does not make sense to give a default here."
+#  repository_name: "Does not make sense to give a default here"
+#  container_name: "Does not make sense to give a default here"
+  container_registry_namespace: "myteam"
+abbreviations:
+  refnode: git@github.com:refnode/cookiecutter-templates.git
+# for testing purpose
+# cookiecutters_dir: "."
+----
+
+== Standards / Conventions / Resources
+
+The repository uses/follows the following standards/conventions:
+
+* Git Basic Standards (ignore / attributes)
+* https://www.conventionalcommits.org/en/v1.0.0/[(Git) Conventional Commits]
+* https://pre-commit.com/[Git Pre-Commit Checks]
+* https://editorconfig.org[Editor Configuration]
+* https://direnv.net/[direnv - Directory based settings management]
+* https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc Format]

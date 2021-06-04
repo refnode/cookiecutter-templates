@@ -1,0 +1,5 @@
+#!/bin/sh
+
+CONTAINER_IMAGE="${CONTAINER_NAME:-{{ cookiecutter.container_name }}:local}"
+
+docker build -t "${CONTAINER_IMAGE}" .

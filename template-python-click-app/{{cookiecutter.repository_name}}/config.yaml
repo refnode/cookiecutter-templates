@@ -1,0 +1,14 @@
+# GoogleContainerTools / container-structure-test
+# https://github.com/GoogleContainerTools/container-structure-test
+
+schemaVersion: '2.0.0'
+
+metadataTest:
+  entrypoint: []
+  cmd: ["/path/to/appbinary"]
+
+fileExistenceTests:
+- name: "Ensure application binary is present"
+  path: "/path/to/appbinary"
+  shouldExist: true
+  permissions: "-rwxr-xr-x"

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+CONTAINER_IMAGE="{{ cookiecutter.container_name }}:local"
+CONTAINER_NAME="${CONTAINER_NAME:-{{ cookiecutter.container_name }}}"
+ENV_FILE="$(pwd)/.env"
+
+docker run -ti --rm \
+  --name="${CONTAINER_NAME}" \
+  --env-file "${ENV_FILE}" \
+  "${CONTAINER_IMAGE}" \
+  $*

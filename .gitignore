@@ -1,0 +1,8 @@
+# SECURITY NOTICE
+
+# ignore dotenv, because it could contain credentials
+# copy .env from a template for local use and customization
+.env
+
+# ignore visual studio code
+.vscode/*

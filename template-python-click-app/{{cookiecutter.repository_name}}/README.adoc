@@ -1,0 +1,55 @@
+= {{ cookiecutter.project_name }}
+
+{{ cookiecutter.project_description_short }}
+
+For standards and conventions used in this repository, please refer to the section at the end of this README.
+
+NOTE: You can always find the latest release of this container image at in the https://hub.docker.com/r/{{ cookiecutter.team_name }}/{{ cookiecutter.container_name }}[dockerhub].
+
+{% if cookiecutter.repository_enable_renovate == 'y' -%}
+NOTE: Automatic Security and Patch Management for this repository is handled by https://github.com/renovatebot/renovate[renovate].
+{%- endif %}
+
+== Getting started
+
+To be written ...
+
+== Build / Extend / Customize
+
+.Shell commands for cloning the repository
+[source,shell]
+----
+# optional create a git namespace dir and cd into it
+mkdir -p $HOME/src/github.com/{{ cookiecutter.repository_namespace }}
+cd $HOME/src/github.com/{{ cookiecutter.repository_namespace }}
+
+# clone the repo
+git clone git@github.com:{{ cookiecutter.repository_namespace }}/{{ cookiecutter.repository_name }}.git
+cd {{ cookiecutter.repository_name }}
+----
+
+After cloning the repo you should execute the bootstrap script in
+the repo root directory. The script will
+
+* copy a templated .env for a local 12-factor apps style development
+* enable a commit message template
+* enable pre-commit.com check for git pre-commit hook
+* enable pre-commit.com check for git commit-msg hook
+
+.Shell commands for preparing the repo use and development
+[source,shell]
+----
+# execute the bootstrap script
+/bin/sh tools/bootstrap.sh
+----
+
+== Standards / Conventions / Resources
+
+The repository uses/follows the following standards/conventions:
+
+* Git Basic Standards (ignore / attributes)
+* https://www.conventionalcommits.org/en/v1.0.0/[(Git) Conventional Commits]
+* https://pre-commit.com/[Git Pre-Commit Checks]
+* https://editorconfig.org[Editor Configuration]
+* https://direnv.net/[direnv - Directory based settings management]
+* https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc Format]

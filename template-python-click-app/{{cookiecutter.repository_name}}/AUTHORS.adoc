@@ -1,0 +1,5 @@
+== {{ cookiecutter.project_name }} Core-Team
+
+* {{ cookiecutter.team_name }} <{{ cookiecutter.team_email }}>
+
+== Special thanks for contributions

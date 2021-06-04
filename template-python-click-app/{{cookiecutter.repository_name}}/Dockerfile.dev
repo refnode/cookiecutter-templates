@@ -1,0 +1,13 @@
+FROM mcr.microsoft.com/vscode/devcontainers/python:0-3.8
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# RUN mkdir /etc/devcontainer
+COPY .devcontainer/devcontainer-setup.sh /sbin/devcontainer-setup.sh
+COPY requirements.txt requirements-dev.txt /etc/devcontainer/
+RUN \
+  chmod 0755 /sbin/devcontainer-setup.sh \
+  && /sbin/devcontainer-setup.sh
+
+# Set the default shell to bash instead of sh
+ENV SHELL /bin/bash
