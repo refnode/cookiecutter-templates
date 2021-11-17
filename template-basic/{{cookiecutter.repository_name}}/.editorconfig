@@ -59,7 +59,7 @@ insert_final_newline = true
 max_line_length = 80
 trim_trailing_whitespace = true
 ## END: YAML
-{%- if cookiecutter.repository_feature_yaml == 'y' %}
+{% endif %}
 
 {%- if cookiecutter.repository_feature_json == 'y' %}
 ## BEGIN: JSON
