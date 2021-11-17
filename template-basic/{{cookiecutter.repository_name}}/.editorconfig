@@ -1,0 +1,88 @@
+# top-most EditorConfig file
+root = true
+
+## Unix-style newlines with a newline ending every file
+# [*]
+# charset = utf-8
+# end_of_line = lf
+# insert_final_newline = true
+# trim_trailing_whitespace = true
+# max_line_length = 80
+
+{%- if cookiecutter.repository_feature_markdown == 'y' %}
+## BEGIN: MARKDOWN
+[*.md]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+trim_trailing_whitespace = true
+## END: MARKDOWN
+{% endif %}
+
+{%- if cookiecutter.repository_feature_asciidoc == 'y' %}
+## BEGIN: ASCIIDOC
+[*.adoc]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+trim_trailing_whitespace = true
+## END: ASCIIDOC
+{% endif %}
+
+{%- if cookiecutter.repository_feature_toml == 'y' %}
+## BEGIN: TOML
+[*.toml]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+trim_trailing_whitespace = true
+## END: TOML
+{% endif %}
+
+{%- if cookiecutter.repository_feature_yaml == 'y' %}
+## BEGIN: YAML
+[*.{yml|yaml}]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+trim_trailing_whitespace = true
+## END: YAML
+{%- if cookiecutter.repository_feature_yaml == 'y' %}
+
+{%- if cookiecutter.repository_feature_json == 'y' %}
+## BEGIN: JSON
+[*.json]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+trim_trailing_whitespace = true
+## END: JSON
+{% endif %}
+
+{%- if cookiecutter.repository_feature_shell == 'y' %}
+## BEGIN: SHELL
+[*.{sh|shell|bash|zsh]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+trim_trailing_whitespace = true
+## END: SHELL
+{% endif %}

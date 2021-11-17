@@ -1,0 +1,50 @@
+# https://git-scm.com/docs/gitattributes
+
+*                      text=auto
+*.patch                -text
+
+## BEGIN: GIT
+*.gitattributes        text eol=lf export-ignore
+.gitignore             text eol=lf export-ignore
+## END: GIT
+
+{%- if cookiecutter.repository_feature_markdown == 'y' %}
+## BEGIN: MARKDOWN
+*.md                   text eol=lf
+## END: MARKDOWN
+{% endif %}
+
+{%- if cookiecutter.repository_feature_asciidoc == 'y' %}
+## BEGIN: ASCIIDOC
+*.adoc                 text eol=lf
+## END: ASCIIDOC
+{% endif %}
+
+{%- if cookiecutter.repository_feature_toml == 'y' %}
+## BEGIN: TOML
+*.toml                 text eol=lf
+## END: TOML
+{% endif %}
+
+{%- if cookiecutter.repository_feature_yaml == 'y' %}
+## BEGIN: YAML
+*.yaml                 text eol=lf
+*.yml                  text eol=lf
+## END: YAML
+{% endif %}
+
+{%- if cookiecutter.repository_feature_json == 'y' %}
+## BEGIN: JSON
+*.json                 text eol=lf
+## END: JSON
+{% endif %}
+
+{%- if cookiecutter.repository_feature_shell == 'y' %}
+## BEGIN: SHELL
+*.sh                   text eol=lf
+*.shell                text eol=lf
+*.bash                 text eol=lf
+*.zsh                  text eol=lf
+*.fish                 text eol=lf
+## END: SHELL
+{% endif %}

@@ -1,0 +1,37 @@
+---
+default_stages:
+  - commit
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 0161422b4e09b47536ea13f49e786eb3616fe0d7 # v2.4.0
+    hooks:
+      - id: no-commit-to-branch
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+        args:
+          - --fix=lf
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+      - id: check-case-conflict
+      {%- if cookiecutter.repository_feature_toml == 'y' %}
+      - id: check-toml
+      {% endif %}
+      {%- if cookiecutter.repository_feature_yaml == 'y' %}
+      - id: check-yaml
+      {% endif %}
+      {%- if cookiecutter.repository_feature_json == 'y' %}
+      - id: check-json
+      {% endif %}
+      {%- if cookiecutter.repository_feature_shell == 'y' %}
+      - id: check-executables-have-shebangs
+      {% endif %}
+
+
+{%- if cookiecutter.repository_enable_conventionalcommit == 'y' %}
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: 2ba6564b82c125266091e2571563f7b957aec19c # 0.12.0
+    hooks:
+      - id: gitlint
+        stages:
+          - commit-msg
+{% endif %}
