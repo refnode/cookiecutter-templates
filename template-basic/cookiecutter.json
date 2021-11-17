@@ -1,0 +1,21 @@
+{
+  "user_fullname": "",
+  "user_name": "",
+  "user_email": "",
+  "team_name": "",
+  "team_email": "",
+  "project_name": "Project Title",
+  "project_description_short": "A short description for the new created repo.",
+  "repository_name": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "repository_namespace": "{{ cookiecutter.team_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "repository_enable_renovate": "y",
+  "repository_enable_git_precommit": "y",
+  "repository_enable_conventionalcommit": "y",
+  "repository_enable_docs": "y",
+  "repository_feature_markdown": "y",
+  "repository_feature_asciidoc": "y",
+  "repository_feature_toml": "y",
+  "repository_feature_yaml": "y",
+  "repository_feature_json": "y",
+  "repository_feature_shell": "y"
+}
