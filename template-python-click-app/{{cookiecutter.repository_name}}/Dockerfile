@@ -1,4 +1,4 @@
-FROM python:3.8.5-slim-buster
+FROM python:3.10.5-slim-buster
 
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
