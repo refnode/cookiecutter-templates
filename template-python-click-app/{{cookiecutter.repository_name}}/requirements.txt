@@ -1,5 +1,5 @@
 --index-url https://pypi.python.org/simple
-pip==21.1.2
+pip==21.3.1
 wheel==0.36.2
 Click==8.0.1
 semver==2.13.0
