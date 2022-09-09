@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/python:0-3.8@sha256:d574ce4bab616c7d2e9984da74f0bf1fda355a027af273d89d45842a8214aa59
+FROM mcr.microsoft.com/vscode/devcontainers/python:0-3.8@sha256:e4d2d718c27531232f1a7228b01250628625a889f861f3b7406d92a6ef097fcc
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
