@@ -1,4 +1,4 @@
-FROM python:3.11.1-slim-buster@sha256:687a73bfa1576c2dc516b50db7203a95f73545d2dd9b612a08da6abf0dafa64a
+FROM python:3.11.1-slim-buster@sha256:7ee8e2303a3beca0258ec067e56c12e3fabb02e9511031980f211dedde8571fe
 
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
